@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  web:
+    build:
+      context: ./modules/
+      args:
+        # 如果要添加多个模块，用空格隔开即可
+        ENABLED_MODULES: http-concat
+    image: shine09/nginx:1.21.4-with-http-concat
